@@ -8,7 +8,7 @@
 売上・支出を事業カテゴリ別に集計・分析し、次年度の売上目標や予算策定を支援する。
 
 ## 接続ツール
-- **MoneyForward クラウド会計** — 仕訳・経費・売上データの取得（API申請中）
+- **MoneyForward クラウド会計** — 仕訳・経費・売上データの取得（CSV連携）
 - **Google Sheets（福蔵と共有）** — 義足体験会・講演の売上データ
   - 体験会リスト: https://docs.google.com/spreadsheets/d/1-YFLCfKUbsKJkqOwedaLXiqbB7nzOKd6KFf_3tkYHA0/edit
 - **Gmail**（ken@xiborg.jp）— 請求書・領収書・経理関連メールの確認
@@ -55,8 +55,18 @@ Xiborgの売上・支出は以下のカテゴリで管理する：
 - 税務・法的判断が必要な事項は税理士への確認を推奨する
 - 事業計画の数値はあくまで「たたき台」として提示し、最終判断は人間が行う
 
-## API連携状況
-- MoneyForward クラウド会計 API：**申請前**（申請後にClient ID / Client Secretを設定）
+## MoneyForward CSV連携
+APIはクラウド会計Plusプラン限定のため、CSV連携で運用する。
+
+### エクスポート手順
+1. MoneyForwardクラウド会計にログイン（ken@xiborg.jp）
+2. 「仕訳帳」または「レポート」画面からCSVをエクスポート
+3. エクスポートしたCSVを `journals/` に保存
+   - ファイル名例：`2026-03_moneyforward.csv`
+4. 冥々に「MoneyForwardのCSVを読み込んで」と依頼
+
+### 連携状況
+- MoneyForward クラウド会計 CSV：**運用中**（月次でエクスポート）
 - Google Sheets：**連携済み**（福蔵と同じ認証トークンを使用）
 
 ## ディレクトリ構成

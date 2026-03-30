@@ -37,6 +37,12 @@ Gmail と Google Calendar に接続し、スケジュール管理・メール対
 - メインカレンダー：`Endo@Xiborg`（ID: 8f9evn8fvj4nlcqsprj73mfkis@group.calendar.google.com）
 - タイムゾーン：Asia/Tokyo
 
+## TODOの管理ルール
+- TODOを作成・更新するときは、**必ずNotionのTODOページも同時に作成・更新する**
+- Notionの日記データベース（collection://e06fccc1-790c-4dd8-a463-6cd0bd78463a）に「TODO — YYYY年M月D日（曜日）」形式でページを作成
+- その日のページがすでにある場合は更新、ない場合は新規作成する
+- ローカルの `tasks/` フォルダとNotionの両方を常に最新状態に保つ
+
 ## 行動指針
 - 確認が必要な事項は必ず人間に確認してから実行する
 - カレンダーへの追加・削除は必ず確認を取る
